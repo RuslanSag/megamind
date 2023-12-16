@@ -1,14 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Document</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+        <title>Your Website</title>
+    </head>
 <body>
-    <h1 class="text-3xl font-bold underline">
-        Hello world!
-    </h1>
+    
+    <header class="bg-gray-800 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            
+            <!-- Logo -->
+            <div class="text-2xl font-bold">
+        <a href="#" class="text-white">Your Logo</a>
+    </div>
+
+      <!-- Navigation -->
+      <nav class="hidden md:flex space-x-4">
+        <a href="#" class="hover:text-gray-300">Bosh sahifa</a>
+        <a href="#" class="hover:text-gray-300">Yangiliklar</a>
+        <a href="#" class="hover:text-gray-300">Reyting</a>
+        <a href="#" class="hover:text-gray-300">Kalkulyatsiya</a>
+        <a href="#" class="hover:text-gray-300">Qoidalar</a>
+        <a href="#" class="hover:text-gray-300">Federatsiya haqida</a>
+    </nav>
+    
+    <!-- Mobile Menu Button (Hidden on Larger Screens) -->
+    <div x-data="{ open: false }" class="relative md:hidden">
+        <button @click="open = !open" class="text-white focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+    </button>
+    <!-- Mobile Menu (Hidden on Larger Screens) -->
+    <div x-show="open" x-transition class="absolute transition top-9 right-0 w-60 bg-gray-700 p-4 mt-2 transition delay-150 duration-300 ease-in-out">
+        <a href="#" class="block text-white py-2 hover:text-gray-400 transition delay-150 duration-300 ease-in-out">Bosh sahifa</a>
+        <a href="#" class="block text-white py-2 hover:text-gray-400 transition delay-150 duration-300 ease-in-out">Yangiliklar</a>
+        <a href="#" class="block text-white py-2 hover:text-gray-400 transition delay-150 duration-300 ease-in-out">Reyting</a>
+        <a href="#" class="block text-white py-2 hover:text-gray-400 transition delay-150 duration-300 ease-in-out">Kalkulyatsiya</a>
+        <a href="#" class="block text-white py-2 hover:text-gray-400 transition delay-150 duration-300 ease-in-out">Qoidalar</a>
+        <a href="#" class="block text-white py-2 hover:text-gray-400 transition delay-150 duration-300 ease-in-out">Federatsiya haqida</a>
+    </div>
+</div>
+
+</div>
+
+</header>
+<section class="py-3" style="background-image: url(img/img-0.png);background-repeat: no-repeat; background-size: 100%; height: 100vh;">
+    <div class="container mx-auto px-4">
+
+    </div>
+  </section>
+  
+
 </body>
 </html>
