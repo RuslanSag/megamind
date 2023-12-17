@@ -1,6 +1,3 @@
-
-
-
 <?php
 include "../connection.php";
 
@@ -8,12 +5,12 @@ $id = $_GET["id"];
 $title = "";
 $text = "";
 $datetime = "";
-$res=mysqli_query($link, "select * from news where id=$id");
-while($row=mysqli_fetch_array($res))
-{
-    $title=$row["title"];
-    $text=$row["text"];
-    $datetime=$row["datetime"];
+
+$res = mysqli_query($link, "select * from news where id=$id");
+while ($row = mysqli_fetch_array($res)) {
+    $title = $row["title"];
+    $text = $row["text"];
+    $datetime = $row["datetime"];
 }
 ?>
 <script src="https://cdn.tailwindcss.com"></script>
@@ -29,7 +26,7 @@ while($row=mysqli_fetch_array($res))
 
         <div class="mt-5 mb-5">
             <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Text</label>
-            <textarea id="message" name="tex" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  ><?php echo $text ?></textarea>
+            <textarea id="message" name="text" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"><?php echo $text ?></textarea>
         </div>
 
 
@@ -46,18 +43,11 @@ while($row=mysqli_fetch_array($res))
 
 </form>
 
-<?php 
-    if (isset($_POST["submit"])){
-        mysqli_query($link, "update party_info set title='$_POST[title]',text='$_POST[text]' where id=$id") or die (mysqli_error($link)); 
-        ?>  
-                <script type="text/javascript">
-            document.getElementById('success').style.display = "block";
-            setTimeout(function(){
-                window.location="news.php";
-            },3000);
-        </script>
-        <?php
-    }
+<?php
+if (isset($_POST["submit"])) {
+    mysqli_query($link, "update news set title='$_POST[title]',text='$_POST[text]' where id=$id") or die(mysqli_error($link));
+    header("Location: news.php");
+    exit;
+}
 
 ?>
-
