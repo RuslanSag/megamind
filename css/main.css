@@ -37,3 +37,7 @@
     width: 20px;
     height: 15px;
 }
+
+.news_grid, .cal_table{
+    padding: 25px;
+}

@@ -1,10 +1,10 @@
 <?php
-include '../header.php';
-include '../connection.php';
+include 'header.php';
+include 'connection.php';
 ?>
 
 <script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="./css/main.css">
 
 <section class="news_grid">
 
@@ -26,10 +26,7 @@ if ($res->num_rows > 0) {
                 </div>
                 <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><?php echo $text ?></p>
                 <small>Posted: <?php echo $datetime ?></small>
-                <div class="flex">
-                    <a href="./news_edit.php?id=<?php echo $row["id"]; ?> " class="warning"><img src="../img/edit.svg" alt=""></a>
-                    <a href="./news_delete.php?id=<?php echo $row["id"]; ?> " class="danger ms-2"><img src="../img/trash.svg" alt=""></a>
-                </div>
+                
             </div>
         </div>
         <?php
