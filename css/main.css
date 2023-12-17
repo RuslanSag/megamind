@@ -38,6 +38,10 @@
     height: 15px;
 }
 
+<<<<<<< HEAD
 .news_grid, .cal_table{
+=======
+.cal_table, .news_table{
+>>>>>>> e42f5183fe80c977f2c3a676d34869323e1660c9
     padding: 25px;
 }
