@@ -1,12 +1,9 @@
 <?php
-include '../header.php';
 include '../connection.php';
 ?>
 
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="../css/main.css">
-
-<section class="news_grid">
 
 <?php
 $sql = "SELECT * FROM news";
@@ -40,4 +37,3 @@ if ($res->num_rows > 0) {
     echo "0 results";
 }
 ?>
-</section>
