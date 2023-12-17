@@ -20,7 +20,7 @@
       <nav class="hidden md:flex space-x-4">
         <a href="./index.php" class="hover:text-gray-300">Bosh sahifa</a>
         <a href="./posted_news.php" class="hover:text-gray-300">Yangiliklar</a>
-        <a href="./ranking.php" class="hover:text-gray-300">Reyting</a>
+        <a href="./posted_ranking.php" class="hover:text-gray-300">Reyting</a>
         <a href="./calculation.php" class="hover:text-gray-300">Kalkulyatsiya</a>
         <a href="./rules.php" class="hover:text-gray-300">Qoidalar</a>
         <a href="#" class="hover:text-gray-300">Federatsiya haqida</a>
